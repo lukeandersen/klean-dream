@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<title>Theme Documentation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- CONTENT META -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  
+    <!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" href="css/main.css">
+
+	<script src="js/libs/modernizr-min.js"></script>
+</head>
+
+<body>
+    
+	<div id="page" class="site">
+
+        <div class="clearfix">
+            <div class="sidebar">
+                <header class="site-header" role="banner">
+                    <h1>KleanDream</h1>
+                    <p>A responsive 1140px theme fluid down to mobile.</p>
+                </header>
+                <nav class="site-navigation clearfix" id="nav" role="navigation">
+                    <ul>
+                        <li><a href="#html">HTML Structure</a></li>
+                        <li><a href="#css">CSS Files and Structure</a></li>
+                        <li><a href="#js">JavaScript</a></li>
+                        <li><a href="#api">API Usage</a></li>
+                        <li><a href="#credits">Sources and Credits</a></li>
+                        <li><a href="#form">Contact form</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content" id="top">
+                <section class="site-content" id="content" role="main"><a name="content"></a>
+                    <article id="html" class="doc-item">
+                        <h2>HTML Structure - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <p>This theme is structured in the latest HTML5 spec and the key areas of each page a defined below.</p>
+                        <h3>Page &lt;head&gt;</h3>
+                        <ol>
+                            <li>Page title</li>
+                            <li>Meta tags for SEO</li>
+                            <li>Google fonts</li>
+                            <li>Style sheet</li>
+                            <li>Modernizer</li>
+                        </ol>
+                        <h3>Page &lt;body&gt;</h3>
+                        <ol>
+                            <li>Header (logo &amp; navigation)</li>
+                            <li>Content (page specific layouts)</li>
+                            <li>Footer (footer columns and copyright)</li>
+                            <li>Scripts (jQuery, plugins, custom scripts, Google analytics)</li>
+                        </ol>
+                        <h3>Updating the logo</h3>
+                        <p>The logo is setup to work with retina displays and requires you to create two separate logo's. One at the original size (eg. 100x50px) and one at double the size (eg. 200x100px). The double size is called logo@2x.png with the "@2x" representing double scale.</p>
+                        <p>Update files: <br>
+                            images/logo.png<br>
+                            images/logo@2x.png <br>
+                            css/style.css (lines 80-81)
+                        </p>
+                        <h3>Components - Columns</h3>
+                        <p>This theme uses a flexible 1140px grid as to scale to all screen dimensions</p>
+                        <p><b>Basic structure</b> - First create a wrapper div with a class of "clearfix", then inside this div create some more div's with the appropriate classes for your desired width and make sure the last div to the right has the class "last" to stop it overflowing.</p>
+                        <p>View the columns template for all possible layouts</p>
+                        <pre>
+                        &lt;div class="clearfix"&gt;
+                            &lt;div class="one-half"&gt;&lt;/div&gt;
+                            &lt;div class="one-half last"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        </pre>
+                        <h3>Components - Icons</h3>
+                        <p>This theme uses font icons which are perfect for retina displays and are simple to customise with CSS. The basic structure for a font icon is below contained in a simple link. The class="icon" will activate the custom font and the data-icon="" will define what icon is used based off a letter in the alphabet. The full listing of icons and their respective letter is in the elements.html template</p>
+                        <pre>
+                        &lt;a href="#"&gt;
+                            &lt;span class="icon" data-icon="s"&gt;&lt;/span&gt;
+                            Link with icon 
+                        &lt;/a&gt;
+                        </pre>
+                    </article>
+                    <article id="css" class="doc-item">
+                        <h2>CSS Files and Structure - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <p>The CSS directory is broken into two areas, style.css and the fonts folder. All styling is done in the style.css file and the fonts folder is to house any custom fonts that you wish to host with the website.</p>
+                        <h3>style.css</h3>
+                        <p>This is broken into key sections from top to bottom</p>
+                        <ol>
+                            <li>Normalize.css</li>
+                            <li>Custom fonts - hosted</li>
+                            <li>Base styles (including headings)</li>
+                            <li>Link styles</li>
+                            <li>General helper classes (including page width)</li>
+                            <li>Custom grid</li>
+                            <li>Layout and element styles (navigation, content, sidebar, widgets)</li>
+                            <li>Plugins</li>
+                            <li>Media queries (tablet &amp; mobile)</li>
+                            <li>Print styles</li>
+                        </ol>
+                        <h3>Custom fonts</h3>
+                        <p>This site uses a mixture of custom fonts, we have font icons that are hosted with the site in the fonts directory and referenced in the top of styles.css</p>
+                        <p><b>This site also uses Google Fonts</b></p>
+                        <p>Google fonts are referenced in the head of each page and can be easily changed:</p>
+                        <ol>
+                            <li>Visit <a href="http://www.google.com/fonts/" target="_blank">http://www.google.com/fonts/</a> and select a font</li>
+                            <li>Update the head with the supplied link code from Google</li>
+                            <li>Update the references in style.css to the new font-family name. <br>
+                                eg. font-family: 'Droid Sans', sans-serif;</li>
+                        </ol>
+                    </article>
+                    <article id="js" class="doc-item">
+                        <h2>JavaScript - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <p>The javascript is split between two main files, plugins.js and script.js and these are referenced in the the page footer right before the closing body tag.</p>
+                        <h3>plugins.js</h3>
+                        <p>This is simply a merged version of all the plugins needed in the theme and is done to speed up the loading time. The original files are located in the js/libs directory for reference.</p>
+                        <h3>scripts.js</h3>
+                        <p>This is where all the interactions are located. The layout is using the javascript namespace format to make sure we can load only the needed scripts when a certain class/ID is found on a page.</p>
+                        <p>&nbsp;</p>
+                        <h3>Lightbox</h3>
+                        <p>To activate a lightbox simply add either of the below options to a link</p>
+                        <ul>
+                            <li>class="lightbox" - for a single lightbox or</li>
+                            <li>rel="lightbox" to create a gallery lightbox</li>
+                        </ul>
+                        <pre>
+                        &lt;a href="image.jpg" class="lightbox"&gt;
+                            Open lightbox
+                        &lt;/a&gt;
+                        </pre>
+                        <p>More info can be found here: <a href="http://fancybox.net/">http://fancybox.net/</a></p>
+                        <h3>Slider</h3>
+                        <p>This theme uses the responsive Flexslider, all documentation and customisation can be found here: <a href="http://www.woothemes.com/flexslider/">http://www.woothemes.com/flexslider/</a> </p>
+                        <p>For a basic slider just create a div with the class="flexslider", then add and an unordered list with the class="slides" inside with the different slides in each list item. See the blog listing template for a simple example.</p>
+                        <p>To change the animation to slide or to change the timing between each slide simply un-comment the option(s) in script.js flexslider function</p>
+                        <h3>Twitter feed</h3>
+                        <p><b>NOTE! Twitter is changing its API and this feature may cease to work in the future. If a work around becomes available I will be sure to include it in a future update.</b></p>
+                        <p>To add your own twitter feed simply add your twitter username in the plugin options in scripts.js (line 112)</p>
+                        <p>More info and options can be found here: <a href="http://tweet.seaofclouds.com/">http://tweet.seaofclouds.com/</a></p>
+                        <h3>Map</h3>
+                        <p>The map is powered by the jQuery gMap plugin.</p>
+                        <p>The map requires two extra scripts (google maps api and gMaps plugin) so these are added in the footer above the reference to plugins.js</p>
+                        <p>To configure the map markers and position, update the plugin options in scripts.js (line 235). To get the lat and long for a map marker use this site:  <a href="http://itouchmap.com/latlong.html">http://itouchmap.com/latlong.html</a>.
+                        <p>More info at <a href="http://www.smashinglabs.pl/gmap">http://www.smashinglabs.pl/gmap</a></p>
+                        <h3>Videos</h3>
+                        <p>To make embedded videos responsive you only need to wrap the iframe code in a div with the class="video" and your done.</p>
+                        <pre>
+                        &lt;div class="video"&gt;
+                            &lt;iframe src="youtube.com" ...
+                        &lt;/div&gt;
+                        </pre>
+                    </article>
+                    <article id="api" class="doc-item">
+                        <h2>API Usage - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <h3>Flickr - Photo stream</h3>
+                        <p>The site only uses one manual API call and this is for the flickr photo stream. To configure the stream you only need to update scripts.js (line 203) and add the desired user ID to the URL.</p>
+                        <p>To get a users ID use <a href="http://idgettr.com/">http://idgettr.com/</a></p>
+                        <p>Update this part of the URL - <b>53358796@N05</b> - with the desired user ID</p>
+                    </article>
+                    <article id="credits" class="doc-item">
+                        <h2>Sources and Credits - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <p>Thanks to everyone who has made the awesome scripts and packages featured in this theme, without their dedication this simply wouldn't be possible.</p>
+                        <ul>
+                            <li>HTML5 Bolilerplate - <a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a></li>
+                            <li>Modernizer.js - <a href="http://modernizr.com/">http://modernizr.com/</a></li>
+                            <li>Selectivizer.js - <a href="http://selectivizr.com/">http://selectivizr.com/</a></li>
+                            <li>Normailze.css - <a href="http://necolas.github.io/normalize.css/">http://necolas.github.io/normalize.css/</a></li>
+                            <li>Flexslider.js - <a href="http://www.woothemes.com/flexslider/">http://www.woothemes.com/flexslider/</a></li>
+                            <li>Fancybox.js - <a href="http://fancybox.net/">http://fancybox.net/</a></li>
+                            <li>Tweet.js - <a href="http://tweet.seaofclouds.com/">http://tweet.seaofclouds.com/</a></li>
+                            <li>FitVids.js - <a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+                            <li>TinyNav.js - <a href="http://tinynav.viljamis.com/">http://tinynav.viljamis.com/</a></li>
+                            <li>gMap.js - <a href="http://www.smashinglabs.pl/gmap">http://www.smashinglabs.pl/gmap</a></li>
+                            <li>Entypo icons - <a href="http://www.entypo.com/">http://www.entypo.com/</a></li>
+                        </ul>
+                    </article>
+                    <article id="form" class="doc-item">
+                        <h2>Contact form - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <p>To setup the contact form you must have the site on a server that can run PHP. To set the email address that the form will be submitted to update send-email.php with the correct email address.</p>
+                    </article> 
+                    <article class="doc-item">
+                        <h2>End - <span><a class="scroll" href="#top">top</a></span></h2>
+                        <p>Once again, thank you so much for purchasing this theme.</p>
+                    </article>
+
+                    
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <!-- #page -->
+  	
+    <!-- scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.8.3.min.js"%3E%3C/script%3E'))</script>
+    <script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+  
+</body>
+</html>

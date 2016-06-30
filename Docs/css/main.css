@@ -1,0 +1,91 @@
+/* Normalize CSS */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}audio,canvas,video{display:inline;zoom:1px;}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}body,button,input,select,textarea{font-family:sans-serif;}a{color:#00e;}a:visited{color:#551a8b;}a:focus{outline:thin dotted;}a:hover,a:active{outline:0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}blockquote{margin:1em 40px;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}pre,code,kbd,samp{font-family:monospace, serif;_font-family:'courier new', monospace;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:none;}q:before,q:after{content:none;}small{font-size:75%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}ul,ol{margin:1em 0;padding:0 0 0 40px;}dd{margin:0 0 0 40px;}nav ul,nav ol{list-style:none;list-style-image:none;}img{border:0;-ms-interpolation-mode:bicubic;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;margin-left:-7px;}button,input,select,textarea{font-size:100%;vertical-align:middle;margin:0;}button,input{line-height:normal;}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;overflow:visible;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}audio:not([controls]),[hidden]{display:none;}body,figure,form{margin:0;}sup,sub{vertical-align:baseline;position:relative;top:-0.4em;}sub{top:0.4em;}
+
+/* STYLE CSS */
+html {font-size: 62.5%; -webkit-font-smoothing: antialiased;}
+body {background:#fff; color:#000; font-size: 1.4em; sheight: 100%; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+h1, h2, h3, h4, h5, h6 { margin: 10px 0; font-family: Tahoma, Verdana, Segoe, sans-serif; font-weight: bold; line-height: 1.5 color: inherit; text-rendering: optimizelegibility; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+pre { background: #e3e3e3; padding: 25px 25px 0;}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+  h2 span { font-size: 70%;}
+h3 { font-size: 20px; color:#888; border-bottom: 2px solid #ccc; margin-top: 2em;}
+h4 { font-size: 16px;}
+
+/* LINKS */
+a, a:active, a:visited { color: #E46942; text-decoration: none; }
+a:hover { text-decoration: underline; }
+::selection { color: white; background-color: #333;}
+::-moz-selection { color: white; background-color: #333;}
+
+/* LAYOUT */
+.site { width: 100%; margin: 0 auto; height: 100%; }
+.sidebar { background: #333; width: 240px; position: fixed; top: 0; left:0; height: 100%; color: #fff; padding:30px; overflow-y: auto; }
+.content { float: left; width: 70%; margin-left: 300px;}
+
+/* Sidebar */
+.sidebar { color: #fff; padding:30px; }
+.sidebar p { color: #999;}
+  .sidebar::-webkit-scrollbar {width: 12px;} 
+  .sidebar::-webkit-scrollbar-track {background: rgba(0,0,0,0.8);}
+  .sidebar::-webkit-scrollbar-thumb {border-radius: 10px; background: rgba(255,255,255,0.3);}
+.site-navigation ul { margin: 2em 0 6em; padding: 0; }
+.site-navigation li { padding: 0; position: relative; list-style: none; }
+.site-navigation a { text-decoration: none; color: #FFF; padding: 10px 10px 10px 0; display: block; border-bottom: 1px dotted #444; }
+.site-navigation a:hover {color: #E46942;}
+
+/* Content */
+.content .site-content { padding: 40px 60px;}
+.content article { margin: 0 0 6em;}
+
+
+/* GENERAL CLASSES */
+.visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visually-hidden.focusable:active, .visually-hidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.text-offscreen {text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.hidden { display: none !important; visibility: hidden; }
+.clear { clear:both; display:block; margin:0; padding:0; height:0; line-height:1px; font-size:1px }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+.left {float: left;}
+.right {float: right;}
+.clear-left {clear: left;}
+.clear-right {clear: right;}
+.align-right { text-align: right;}
+.img-left {float: left;margin: 0 15px 15px 0;}
+.img-right {float: right;margin: 0 0 15px 15px;}
+.last { margin-right:0 !important;}
+
+.no-marg {margin: 0;}
+.no-marg-btm {margin-bottom: 0;}
+
+
+/* Grid 
+.one-half, .one-third, .two-third, .one-fourth, .three-fourth {float: left; margin-right: 20px;}
+.one-half.last, .one-third.last, .two-third.last, .one-fourth.last, .three-fourth.last {margin-right: 0;}
+.one-half {width: 460px;}
+.one-third {width: 300px;}
+.two-third {width: 620px;}
+.one-fourth {width: 220px;}
+.three-fourth {width: 700px;}
+*/
+
+
+/* PRINT */
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
